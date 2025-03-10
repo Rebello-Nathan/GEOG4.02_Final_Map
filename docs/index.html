@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Renaming in the US</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Political Renaming in the United States</h1>
+    <p>Use the slider below the map to select a year and see how the names of 16 historically significant locations have changed over time.</p>
+    <div id="map"></div>
+    <div id="slider-container">
+        <label for="date-slider">Select Year: </label>
+        <input type="range" id="date-slider" min="1800" max="2025" step="1" value="2025">
+        <span id="selected-year">2025</span>
+    </div>
+    <div id="write-up">
+        <h2>Note:</h2>
+        <p>
+            Above is the map showcasing the locations for 16 historical locations in the US. For the analysis
+            of the three in bold, the Gulf of America, Mount McKinley, and Fort Bragg, please read my attached essay.
+
+        </p>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

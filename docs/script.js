@@ -135,7 +135,7 @@ var places = [
         lon: -79.01,
         nameChanges: [
             { start: 1918, name: 'Camp Bragg' },
-            {Start: 1933, name: 'Fort Bragg' },
+            { start: 1933, name: 'Fort Bragg' },
             { start: 2023, name: 'Fort Liberty' },
             { start: 2025, name: 'Fort Bragg' }
         ],

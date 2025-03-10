@@ -167,7 +167,7 @@ function getName(place, year) {
     var changes = place.nameChanges.sort((a, b) => a.start - b.start);
     for (var i = changes.length - 1; i >= 0; i--) {
         if (changes[i].start <= year) {
-            return changes[i].name;
+            return '';
         }
     }
     return changes[0].name;

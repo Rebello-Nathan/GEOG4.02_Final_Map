@@ -1,0 +1,36 @@
+body { 
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#slider-container {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+#date-slider {
+    width: 50%;
+    vertical-align: middle;
+}
+
+#selected-year {
+    margin-left: 10px;
+}
+
+#write-up {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.leaflet-tooltip.focus-tooltip {
+    font-weight: bold;
+    font-size: 14px;
+}

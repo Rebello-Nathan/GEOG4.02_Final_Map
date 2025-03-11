@@ -165,12 +165,15 @@ var places = [
 
 function getName(place, year) {
     var changes = place.nameChanges.sort((a, b) => a.start - b.start);
+        if (year < changes[0].start) {
+        return "";
+    }
     for (var i = changes.length - 1; i >= 0; i--) {
         if (changes[i].start <= year) {
             return changes[i].name;
         }
-    }
-    return changes[0].name;
+    } 
+    return "";
 }
 
 var markerGroup = L.layerGroup().addTo(map);
@@ -178,25 +181,30 @@ var markerGroup = L.layerGroup().addTo(map);
 places.forEach(function(place) {
     var marker = L.marker([place.lat, place.lon]);
     var initialName = getName(place, 2025);
-    
     var tooltipOptions = {
         permanent: true,
         direction: 'top',
         className: place.focus ? 'focus-tooltip' : ''
     };
-    marker.bindTooltip(initialName, tooltipOptions);
-    
-    marker.place = place;
-    
+    marker.bindTooltip(initialName, tooltipOptions); 
+    marker.place = place; 
     markerGroup.addLayer(marker);
 });
 
 document.getElementById('date-slider').addEventListener('input', function() {
     var selectedYear = parseInt(this.value);
     document.getElementById('selected-year').textContent = selectedYear;
-    
     markerGroup.eachLayer(function(layer) {
         var name = getName(layer.place, selectedYear);
-        layer.getTooltip().setContent(name);
+        var tooltip = layer.getTooltip();
+        if (tooltip) {
+            var tooltipEl = tooltip.getElement();
+            if (name === "") {
+                tooltipEl.style.display = 'none';
+            } else {
+                tooltipEl.style.display = '';
+                tooltip.setContent(name);
+            }
+        }
     });
 });

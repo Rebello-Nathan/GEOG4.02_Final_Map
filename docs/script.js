@@ -94,15 +94,6 @@ var places = [
         ]
     },
     {
-        name: 'New York',
-        lat: 40.7128,
-        lon: -74.0060,
-        nameChanges: [
-            { start: 1624, name: 'New Amsterdam' },
-            { start: 1664, name: 'New York' }
-        ]
-    },
-    {
         name: 'San Francisco',
         lat: 37.7749,
         lon: -122.4194,
@@ -120,15 +111,7 @@ var places = [
             { start: 1835, name: 'Los Angeles' }
         ]
     },
-    {
-        name: 'Charleston',
-        lat: 32.7765,
-        lon: -79.9311,
-        nameChanges: [
-            { start: 1670, name: 'Charles Town' },
-            { start: 1783, name: 'Charleston' }
-        ]
-    },
+
     {
         name: 'Fort Bragg',
         lat: 35.14,
